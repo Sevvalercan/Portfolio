@@ -1,38 +1,74 @@
-'use client'
-import { motion } from 'framer-motion'
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useSectionInView } from "@/lib/hooks";
+import SectionHeading from "../ui/SectionHeading";
 
 export default function About() {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["0 1", "1.2 1"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
+  const { ref: sectionRef } = useSectionInView("About");
+
   return (
-    <section className="min-h-screen flex items-center justify-center bg-neutral-950">
+    <section
+      ref={sectionRef}
+      id="about"
+      className="scroll-mt-28 mb-28 px-4 text-white"
+    >
+      <SectionHeading>Hakkımda</SectionHeading>
+
       <motion.div
-        className="relative bg-gradient-to-br from-neutral-900 via-neutral-950 to-black rounded-2xl shadow-2xl border border-neutral-800 p-10 max-w-xl w-full mx-4"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        ref={cardRef}
+        style={{ scale, opacity }}
+        className="group relative max-w-[42rem] mx-auto rounded-lg border border-purple-500/10 bg-white/5 p-10 sm:p-12 transition duration-300 overflow-hidden"
       >
-        {/* Glow effect */}
-        <div className="pointer-events-none absolute inset-0 rounded-2xl z-0" style={{
-          boxShadow: "0 0 60px 10px #00f0ff44, 0 0 0 0 #000"
-        }} />
-        <div className="relative z-10 text-center">
-          <motion.h2
-            className="text-3xl font-bold mb-6 text-white drop-shadow-lg"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            Hakkımda
-          </motion.h2>
-          <motion.p
-            className="text-lg text-neutral-300"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            Bilgisayar mühendisiyim. Frontend teknolojilerine ilgi duyuyorum. Kullanıcı dostu ve animasyonlu arayüzler geliştiriyorum. React, Next.js, Tailwind CSS gibi teknolojilerle çalışıyorum.
-          </motion.p>
-        </div>
+        {/* Mor ışık efekti */}
+        <div
+          className="absolute -z-10 blur-2xl opacity-30 group-hover:opacity-50 transition duration-500"
+          style={{
+            top: "-20%",
+            left: "50%",
+            width: "150%",
+            height: "150%",
+            transform: "translateX(-50%)",
+            background:
+              "radial-gradient(circle at center, rgba(168,85,247,0.6) 0%, transparent 70%)",
+          }}
+        />
+
+        <motion.div
+          className="text-center"
+          whileHover={{
+            scale: 1.03,
+          }}
+          transition={{ type: "spring", stiffness: 20, damping: 20 }}
+        >
+          <p className="text-lg leading-relaxed text-gray-300">
+            Merhaba! Ben <strong>Şevval Ercan</strong>, bilgisayar mühendisiyim.
+            Özellikle kullanıcı deneyimi odaklı ve görsel olarak zengin web
+            arayüzleri geliştirmeye ilgi duyuyorum.
+            <br />
+            <br />
+            React ve Next.js ile dinamik ve performanslı uygulamalar
+            geliştiriyorum. Tailwind CSS ve Framer Motion gibi modern araçlarla
+            sade ama etkili tasarımlar oluşturuyorum.
+            <br />
+            <br />
+            Ekip içinde üretken çalışmayı ve sürekli öğrenmeyi ön planda
+            tutuyorum. Projelerde sadece kod değil, aynı zamanda fikir üretme,
+            çözüm geliştirme ve kullanıcıyı anlama aşamalarında da aktif rol
+            almayı seviyorum.
+          </p>
+        </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
