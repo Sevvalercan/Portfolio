@@ -1,42 +1,58 @@
-'use client'
-import { motion } from 'framer-motion'
+"use client";
 
-const experiences = [
-  {
-    company: 'ABC Teknoloji',
-    role: 'Frontend Developer',
-    period: '2023 - 2024',
-    desc: 'React ve Next.js kullanarak kurumsal dashboard arayüzleri geliştirdim.',
-  },
-  {
-    company: 'XYZ Yazılım',
-    role: 'Stajyer Mühendis',
-    period: '2022 Yazı',
-    desc: 'API entegrasyonu ve UI test otomasyonları üzerine çalıştım.',
-  },
-  {
-    company: 'Freelance Projeler',
-    role: 'Frontend Geliştirici',
-    period: '2021 - Devam',
-    desc: 'Küçük ölçekli işletmelere özel web çözümleri sundum.',
-  },
-]
+import React from "react";
+import SectionHeading from "@/components/ui/SectionHeading";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { experiencesData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
+  const { ref } = useSectionInView("Experience");
+  const { theme } = useTheme();
+
   return (
-    <section className="py-20 px-4 max-w-4xl mx-auto">
-      <motion.h2 className="text-3xl font-semibold text-center mb-10" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-        İş Deneyimlerim
-      </motion.h2>
-      <div className="space-y-6">
-        {experiences.map((exp, idx) => (
-          <motion.div key={idx} className="border-l-4 pl-4 border-blue-500">
-            <h3 className="text-xl font-bold">{exp.company}</h3>
-            <p className="italic text-sm text-muted-foreground">{exp.role} • {exp.period}</p>
-            <p className="mt-2">{exp.desc}</p>
-          </motion.div>
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+      <SectionHeading>My experience</SectionHeading>
+      <VerticalTimeline lineColor={theme === "light" ? "#9ca3af" : "rgba(255, 255, 255, 0.5)"}>
+        {experiencesData.map((item, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              contentStyle={{
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                boxShadow: "none",
+                border: "1px solid rgba(0, 0, 0, 0.05)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
+              }}
+              contentArrowStyle={{
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+              }}
+              date={item.date}
+              icon={item.icon}
+              iconStyle={{
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                fontSize: "1.5rem",
+              }}
+            >
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <p className="font-normal !mt-0">{item.location}</p>
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {item.description}
+              </p>
+            </VerticalTimelineElement>
+          </React.Fragment>
         ))}
-      </div>
+      </VerticalTimeline>
     </section>
-  )
+  );
 }
