@@ -52,20 +52,19 @@ export default function About() {
           transition={{ type: "spring", stiffness: 20, damping: 20 }}
         >
           <p className="text-lg leading-relaxed text-gray-300">
-            Merhaba! Ben <strong>Şevval Ercan</strong>, bilgisayar mühendisiyim.
-            Özellikle kullanıcı deneyimi odaklı ve görsel olarak zengin web
-            arayüzleri geliştirmeye ilgi duyuyorum.
+            Merhaba! Ben <strong>Şevval Ercan</strong>, Bilgisayar Mühendisliği
+            lisans eğitimimi Fırat Üniversitesi'nde tamamladım.
             <br />
             <br />
-            React ve Next.js ile dinamik ve performanslı uygulamalar
-            geliştiriyorum. Tailwind CSS ve Framer Motion gibi modern araçlarla
-            sade ama etkili tasarımlar oluşturuyorum.
+            Mezuniyetim sırasında ve sonrasında çeşitli firmalarda yazılım stajı
+            yaparak hem .NET/C# hem de Java teknolojileriyle kurumsal uygulamalar
+            geliştirme deneyimi kazandım.
             <br />
             <br />
-            Ekip içinde üretken çalışmayı ve sürekli öğrenmeyi ön planda
-            tutuyorum. Projelerde sadece kod değil, aynı zamanda fikir üretme,
-            çözüm geliştirme ve kullanıcıyı anlama aşamalarında da aktif rol
-            almayı seviyorum.
+            Şu anda Tostbang Teknoloji'de <strong>Jr. Front‑End Developer & UI/UX Designer</strong> olarak çalışıyorum. React, Next.js, TypeScript ve Tailwind CSS gibi modern teknolojilerle kullanıcı odaklı arayüzler geliştiriyorum.
+            <br />
+            <br />
+            Kullanıcı deneyimini ön planda tutarak hem teknik hem tasarımsal açıdan değer katan çözümler üretmeyi seviyorum. Takım çalışmasına yatkın, sürekli öğrenmeye açık ve detaylara önem veren bir geliştiriciyim.
           </p>
         </motion.div>
       </motion.div>

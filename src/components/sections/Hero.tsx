@@ -1,7 +1,7 @@
-'use client'
-import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail } from 'lucide-react'
-import Link from 'next/link'
+"use client";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,7 +24,8 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="mt-4 text-lg md:text-xl max-w-2xl z-10 text-white/80"
       >
-        LinkedIn profilimi inceleyin. Kod odaklı çözümler geliştiriyor, yaratıcı web projelerine hayat veriyorum.
+        LinkedIn profilimi inceleyin. Kod odaklı çözümler geliştiriyor, yaratıcı
+        web projelerine hayat veriyorum.
       </motion.p>
 
       <motion.div
@@ -41,29 +42,29 @@ export default function Hero() {
           <Linkedin className="w-6 h-6" />
           <span>LinkedIn</span>
         </Link>
-        <Link href="mailto:sevval@example.com" className="card-item">
+        <Link href="mailto:sevvalercan3@gmail.com" className="card-item">
           <Mail className="w-6 h-6" />
           <span>Mail</span>
         </Link>
       </motion.div>
       <motion.pre
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 1 }}
-  className="mt-12 bg-zinc-800/80 text-left text-sm p-6 rounded-xl text-green-400 font-mono w-full max-w-2xl overflow-auto shadow-lg"
->
-  {`{
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="mt-12 bg-zinc-800/80 text-left text-sm p-6 rounded-xl text-green-400 font-mono w-full max-w-2xl overflow-auto shadow-lg"
+      >
+        {`{
   "name": "Şevval Ercan",
   "title": "Bilgisayar Mühendisi",
   "skills": ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Redux"],
-  "location": "Türkiye",
+  "location": "Türkiye,Diyarbakır",
   "contact": {
-    "linkedin": "linkedin.com/in/sevvalercan",
-    "github": "github.com/sevvalercan",
-    "email": "sevval@example.com"
+    "linkedin": "linkedin.com/in/sevval-ercan",
+    "github": "github.com/sevvalercan3",
+    "email": "sevvalercan3@gmail.com"
   }
 }`}
-</motion.pre>
+      </motion.pre>
     </section>
-  )
+  );
 }
