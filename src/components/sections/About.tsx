@@ -51,21 +51,19 @@ export default function About() {
           }}
           transition={{ type: "spring", stiffness: 20, damping: 20 }}
         >
-          <p className="text-lg leading-relaxed text-gray-300">
-            Merhaba! Ben <strong>Şevval Ercan</strong>, Bilgisayar Mühendisliği
-            lisans eğitimimi Fırat Üniversitesi'nde tamamladım.
-            <br />
-            <br />
-            Mezuniyetim sırasında ve sonrasında çeşitli firmalarda yazılım stajı
-            yaparak hem .NET/C# hem de Java teknolojileriyle kurumsal uygulamalar
-            geliştirme deneyimi kazandım.
-            <br />
-            <br />
-            Şu anda Tostbang Teknoloji'de <strong>Jr. Front‑End Developer & UI/UX Designer</strong> olarak çalışıyorum. React, Next.js, TypeScript ve Tailwind CSS gibi modern teknolojilerle kullanıcı odaklı arayüzler geliştiriyorum.
-            <br />
-            <br />
-            Kullanıcı deneyimini ön planda tutarak hem teknik hem tasarımsal açıdan değer katan çözümler üretmeyi seviyorum. Takım çalışmasına yatkın, sürekli öğrenmeye açık ve detaylara önem veren bir geliştiriciyim.
-          </p>
+        <p className="text-lg leading-relaxed text-gray-300">
+  Hello! I'm <strong>Şevval Ercan</strong>, a Computer Engineering graduate from Fırat University.
+  <br />
+  <br />
+  During and after my studies, I completed software internships at various companies where I gained hands-on experience developing applications using both .NET/C# and Java technologies.
+  <br />
+  <br />
+  I am currently working at Tostbang Technology as a <strong>Jr. Front‑End Developer & UI/UX Designer</strong>. I build user-focused interfaces using modern technologies such as React, Next.js, TypeScript, and Tailwind CSS.
+  <br />
+  <br />
+  I enjoy creating solutions that add value both technically and visually, with a strong emphasis on user experience. I’m a detail-oriented developer who thrives in collaborative environments and is always eager to learn.
+</p>
+
         </motion.div>
       </motion.div>
     </section>

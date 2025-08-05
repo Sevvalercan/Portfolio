@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "../../public/corpcomment.png";
-import rmtdevImg from "../../public/rmtdev.png";
-import wordanalyticsImg from "../../public/wordanalytics.png";
+import eczajet from "../../public/eczajet.png";
+import examImg from "../../public/exam.png";
+import libraryImg from "../../public/library.png";
 
 export const links = [
   {
@@ -34,70 +34,68 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
-  {
-    title: "Computer Engineering Student",
-    location: "Fırat Üniversitesi, Elazığ",
-    description:
-      "Bilgisayar Mühendisliği lisans eğitimim süresince yazılım geliştirme, algoritmalar, veri yapıları, veritabanı sistemleri ve mühendislik prensipleri üzerine yoğunlaştım.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2018 ‑ 2023",
-  },
-  {
-    title: "Yazılım Stajyeri",
-    location: "SAGTEK Biyomedikal, Diyarbakır",
-    description:
-      "C#, .NET Framework ve SQL Server ile masaüstü uygulamaları geliştirme süreçlerinde görev aldım. PostgreSQL üzerinde veri tabanı işlemleri gerçekleştirdim ve kurumsal yazılım geliştirme pratiği kazandım.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2021",
-  },
-  {
-    title: "Yazılım Stajyeri",
-    location: "İNSERES, Elazığ",
-    description:
-      "Java ve MySQL kullanarak kurumsal yazılım projelerine katkı sağladım. Özellikle veritabanı yönetimi ve arka uç geliştirme alanlarında deneyim edindim.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2021",
-  },
-  {
-    title: "Jr. Front‑End Developer & Designer",
-    location: "Tostbang Teknoloji, Diyarbakır",
-    description:
-      "Tostbang'de front‑end developer ve UI/UX designer olarak görev alıyorum. React, Next.js ve Tailwind CSS gibi teknolojilerle kullanıcı dostu arayüzler geliştiriyorum.",
-    icon: React.createElement(FaReact),
-    date: "2023 ‑ present",
-  }
-
-  
-  
+ {
+  title: "Computer Engineering Student",
+  location: "Fırat University, Elazığ",
+  description:
+    "During my undergraduate studies in Computer Engineering, I focused on software development, algorithms, data structures, database systems, and core engineering principles.",
+  icon: React.createElement(LuGraduationCap),
+  date: "2018 ‑ 2023",
+},
+{
+  title: "Software Intern",
+  location: "SAGTEK Biomedical, Diyarbakır",
+  description:
+    "Worked on desktop applications using C#, .NET Framework, and SQL Server. Also performed database operations with PostgreSQL and gained practical experience in corporate software development.",
+  icon: React.createElement(CgWorkAlt),
+  date: "2021",
+},
+{
+  title: "Software Intern",
+  location: "İNSERES, Elazığ",
+  description:
+    "Contributed to enterprise software projects using Java and MySQL. Gained experience in backend development and database management.",
+  icon: React.createElement(CgWorkAlt),
+  date: "2021",
+},
+{
+  title: "Jr. Front‑End Developer & Designer",
+  location: "Tostbang Technology, Diyarbakır",
+  description:
+    "Currently working as a front-end developer and UI/UX designer. I develop user-friendly interfaces using technologies like React, Next.js, and Tailwind CSS.",
+  icon: React.createElement(FaReact),
+  date: "2023 ‑ present",
+},
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Eczajet",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A web-based platform that helps users easily find on-duty pharmacies, nearby pharmacies, and the medicines they are looking for.",
+    tags: ["Next.js", ".NET", "MongoDB", "Express", "Tailwind"],
+    imageUrl: eczajet,
   },
   {
-    title: "rmtDev",
+    title: "E-Exam System",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A system where users can take exams and solve multiple-choice tests, with an admin panel for managing exams and questions. The backend was developed using .NET Web API and MSSQL.",
+    tags: ["Next.js", ".NET", "MSSQL", "Tailwind", "TypeScript"],
+    imageUrl: examImg,
   },
   {
-    title: "Word Analytics",
+    title: "Library Reservation System",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A web-based platform where users can reserve books and make appointments, with an admin panel for managing the system.",
+    tags: ["Next.js", ".NET", "MSSQL", "Tailwind", "TypeScript"],
+    imageUrl: libraryImg,
   },
 ] as const;
 
 export const skillsData = [
   "HTML",
   "CSS",
+  "Bootstrap",
   "JavaScript",
   "React",
   "Redux",
@@ -105,7 +103,12 @@ export const skillsData = [
   "TypeScript",
   "Tailwind",
   "Framer Motion",
+  ".NET",
+  "C#",
+  "Java",
+  "MSSQL",
   "Figma",
+  "UI/UX Design",
   //"Node.js",
   //"Git",
   //"Prisma",

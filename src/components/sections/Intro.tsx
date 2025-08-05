@@ -59,13 +59,12 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Merhaba, ben Şevval Ercan.</span> <br />
-        Bilgisayar mühendisi olarak{" "}
-        <span className="font-bold">frontend ve backend</span> geliştirme
-        yapıyorum.
-        <br />
-        <span className="italic">React (Next.js)</span> ile projeler
-        geliştiriyorum.
+        Hello, I’m <span className="font-bold">Şevval Ercan.</span> As a
+        computer engineer, I work both as a{" "}
+        <span className="font-bold">front-end developer & designer</span>
+        and as a <span className="font-bold">back-end developer.</span> I build
+        projects using
+        <span className="italic">React, Next.js, and .NET</span> technologies.
       </motion.h1>
 
       <motion.div
@@ -86,7 +85,7 @@ export default function Intro() {
 
         {/* Buton 2 */}
         <a
-          href="/CV.pdf"
+          href="/Şevval-Ercan-CV.pdf"
           download
           className="group flex items-center justify-center gap-3 h-14 min-w-[10rem] bg-gray-700 text-white px-8 rounded-full outline-none 
           focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-600 text-base font-semibold shadow-md"
