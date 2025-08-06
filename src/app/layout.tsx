@@ -1,11 +1,11 @@
-import "@/styles/globals.css";
-import ThemeContextProvider from "@/context/theme-context";
-import ActiveSectionContextProvider from "@/context/active-section-context";
 import Header from "@/components/sections/Header";
-import Footer from "@/components/sections/Footer";
-import ThemeSwitch from "@/components/theme-switch";
-import { Toaster } from "react-hot-toast";
+import "@/styles/globals.css";
 import { Inter } from "next/font/google";
+import ActiveSectionContextProvider from "@/context/active-section-context";
+import Footer from "@/components/sections/Footer";
+// import ThemeSwitch from "@/components/theme-switch";
+import ThemeContextProvider from "@/context/theme-context";
+import { Toaster } from "react-hot-toast";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,7 +36,7 @@ export default function RootLayout({
             <Footer />
 
             <Toaster position="top-right" />
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
